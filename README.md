@@ -1,14 +1,14 @@
 
-browserify-replace
+streplacify
 ====================
 
 [Browserify](http://browserify.org/) Transform For Replacing Strings.
 
 <p/>
-<img src="https://nodei.co/npm/browserify-replace.png?downloads=true&stars=true" alt=""/>
+<img src="https://nodei.co/npm/streplacify.png?downloads=true&stars=true" alt=""/>
 
 <p/>
-<img src="https://david-dm.org/rse/browserify-replace.png" alt=""/>
+<img src="https://david-dm.org/rse/streplacify.png" alt=""/>
 
 About
 -----
@@ -25,7 +25,7 @@ Installation
 
 ```shell
 $ npm install -g browserify
-$ npm install -g browserify-replace
+$ npm install -g streplacify
 ```
 
 Usage
@@ -34,7 +34,7 @@ Usage
 #### Shell
 
 ```shell
-$ browserify -t [ browserify-replace \
+$ browserify -t [ streplacify \
                   --replace '{ "from": "\\$foo", "to": 42 }' \
                   --replace '{ "from": "\\$bar", "to": "quux" }' ] \
              -o sample.browser.js sample.js
@@ -53,7 +53,7 @@ module.exports = function (grunt) {
                 },
                 options: {
                     transform: [
-                        [   "browserify-replace", {
+                        [   "streplacify", {
                                 replace: [
                                     { from: /\$foo/, to: 42 },
                                     { from: /\$bar/, to: "quux" }
